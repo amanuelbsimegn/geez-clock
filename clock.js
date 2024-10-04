@@ -10,15 +10,16 @@ const clockDisplay = new Map([
 ]);
 
 function setup() {
+  // Prepare Canvas
   createCanvas(window.innerWidth * .85, window.innerHeight * .85);
-  stroke(255);
   angleMode(DEGREES);
-
+  
   // Set text color, size, and alignment
+  stroke(255);
   textSize(50);
   textAlign(CENTER, CENTER);
 
-  // Set the color mode to hue-saturation-brightness (HSB)
+  // Set the color mode
   colorMode(RGB);
 
   clockBG = loadImage('assets/sefed-bl.png');
@@ -30,7 +31,7 @@ function setup() {
   hoursRadius = radius * 0.5;
   clockDiameter = radius * 1.85;
 
-  describe('A functioning clock on Ethiopian flag & Ge\'ez numbers.');
+  describe('A functioning clock on Ethiopian sefed & Ge\'ez numbers.');
 }
 
 function draw() {
@@ -46,7 +47,7 @@ function draw() {
   fill(218, 18, 26);
   ellipse(0, 0, clockDiameter, clockDiameter);
   
-  // // Color
+  // Color
   fill(75);
   ellipse(0, 0, clockDiameter - 15, clockDiameter - 15);
   // Image
@@ -59,8 +60,8 @@ function draw() {
 
   stroke(255);
 
-  // Clock labels / numbers / 1-12
-  // Loop through angles 0, 30, 60, 90 degrees
+  // Clock labels / numbers / 1-12 / -፲፪
+  // Loop through angles 0, 30, 60, 90... degrees
   for (let angle=0; angle < 360; angle += 30) {
     push();                       
 
@@ -74,7 +75,6 @@ function draw() {
 
     // Display the angle
     strokeWeight(2.5);
-    // text(angle, 0, 0);
     text(clockDisplay.get(angle.toString()), 0, 0);
     
     pop();
