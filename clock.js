@@ -51,6 +51,7 @@ function draw() {
   fill(75);
   ellipse(0, 0, clockDiameter - 15, clockDiameter - 15);
   // Image
+  clockBG.resize(clockDiameter - 15, clockDiameter - 15);
   image(clockBG, -clockBG.width / 2, - clockBG.height / 2);
 
   // Calculate angle for each hand
