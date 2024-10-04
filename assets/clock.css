@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;900&display=swap');
+
+@font-face {
+    font-family: 'Ethiopic Hiwua';
+    src: url("hiwua.ttf") format("truetype");
+    font-weight: 100;
+    font-style: normal;
+}
+
+* { font-family: 'Ethiopic Hiwua' !important;
+    font-weight: 600; }
+
+.not-geez {
+    font-family: 'Roboto' !important;
+    font-weight: 600;
+}
